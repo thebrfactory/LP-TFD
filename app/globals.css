@@ -1,0 +1,312 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+    background-color: #000000;
+    color: #E8E8E8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(204, 32, 32, 0.35);
+    color: #E8E8E8;
+  }
+}
+
+@layer utilities {
+
+  /* ─── Typography ─── */
+
+  .headline-glow {
+    color: #CC2020;
+    letter-spacing: 0.08em;
+    text-shadow:
+      0 0 18px rgba(160, 8,  8,  0.80),
+      0 0 45px rgba(120, 4,  4,  0.50),
+      0 0 90px rgba(80,  0,  0,  0.25);
+  }
+
+  .subheadline-glow {
+    text-shadow:
+      0 0 16px rgba(140, 6,  6,  0.65),
+      0 0 40px rgba(90,  0,  0,  0.30);
+  }
+
+  .logo-glow {
+    filter:
+      drop-shadow(0 0 8px  rgba(180, 130, 0, 0.70))
+      drop-shadow(0 0 22px rgba(120, 80,  0, 0.40))
+      drop-shadow(0 0 50px rgba(70,  45,  0, 0.18));
+  }
+
+  /* ─── Tarja inputs ─── */
+
+  .tarja-input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 18px;
+    color: #E8E8E8;
+    font-size: 0.9rem;
+    font-weight: 300;
+    -webkit-appearance: none;
+    z-index: 1;
+  }
+
+  .tarja-input::placeholder {
+    color: #7A4848;
+    font-weight: 200;
+    letter-spacing: 0.04em;
+  }
+
+  .tarja-input:-webkit-autofill,
+  .tarja-input:-webkit-autofill:hover,
+  .tarja-input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px #0a0000 inset;
+    -webkit-text-fill-color: #E8E8E8;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  /* ─── Tarja button glow ─── */
+
+  @keyframes ctaBreathDrop {
+    0%, 100% { filter: drop-shadow(0 0 8px rgba(204, 32, 32, 0.30)); }
+    50%       { filter: drop-shadow(0 0 22px rgba(204, 32, 32, 0.58)); }
+  }
+
+  .tarja-btn-glow {
+    animation: ctaBreathDrop 3.2s ease-in-out infinite;
+  }
+
+  /* ─── Camera flash — red carpet ─── */
+
+  @keyframes cameraFlash {
+    0%, 91%, 100% { opacity: 0; }
+    92%  { opacity: 0.90; }
+    93%  { opacity: 0.04; }
+    94%  { opacity: 0.68; }
+    95%  { opacity: 0; }
+  }
+
+  .flash {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    mix-blend-mode: screen;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 1.00)  0%,
+      rgba(255, 255, 230, 0.72) 12%,
+      rgba(255, 235, 160, 0.30) 35%,
+      rgba(255, 210, 100, 0.07) 58%,
+      transparent               72%
+    );
+    filter: blur(5px);
+    will-change: opacity;
+    animation: cameraFlash linear infinite;
+  }
+
+  /* ─── Background blob animations ─── */
+
+  @keyframes blob1 {
+    0%, 100% { transform: translate(0%, 0%) scale(1); }
+    33%       { transform: translate(7%, 14%) scale(1.10); }
+    66%       { transform: translate(-5%, 7%) scale(0.94); }
+  }
+
+  @keyframes blob2 {
+    0%, 100% { transform: translate(0%, 0%) scale(1); }
+    33%       { transform: translate(-10%, -12%) scale(1.14); }
+    66%       { transform: translate(6%, -6%) scale(0.92); }
+  }
+
+  @keyframes blob3 {
+    0%, 100% { transform: translate(0%, 0%) scale(1); }
+    50%       { transform: translate(12%, -10%) scale(1.08); }
+  }
+
+  @keyframes blob4 {
+    0%, 100% { transform: translate(0%, 0%) scale(1); }
+    40%       { transform: translate(-8%, 10%) scale(1.12); }
+    80%       { transform: translate(5%, -5%) scale(0.90); }
+  }
+
+  .bg-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    pointer-events: none;
+    will-change: transform;
+  }
+
+  /* Vermelho sangue — top left */
+  .bg-blob-1 {
+    width: 75vw;
+    height: 75vw;
+    max-width: 640px;
+    max-height: 640px;
+    background: radial-gradient(circle, rgba(210, 14, 14, 0.58) 0%, rgba(160, 8, 8, 0.30) 45%, transparent 68%);
+    top: -4vw;
+    left: -2vw;
+    animation: blob1 3.5s ease-in-out infinite;
+  }
+
+  /* Vermelho sangue — bottom right */
+  .bg-blob-2 {
+    width: 65vw;
+    height: 65vw;
+    max-width: 560px;
+    max-height: 560px;
+    background: radial-gradient(circle, rgba(180, 10, 10, 0.50) 0%, rgba(120, 6, 6, 0.22) 50%, transparent 68%);
+    bottom: -4vw;
+    right: -4vw;
+    animation: blob2 4.5s ease-in-out infinite;
+  }
+
+  /* Carmesim — centro */
+  .bg-blob-3 {
+    width: 55vw;
+    height: 55vw;
+    max-width: 480px;
+    max-height: 480px;
+    background: radial-gradient(circle, rgba(150, 10, 10, 0.38) 0%, rgba(100, 5, 5, 0.15) 55%, transparent 70%);
+    top: 28%;
+    left: 22%;
+    animation: blob3 5.5s ease-in-out infinite;
+  }
+
+  /* Amarelo — acento top right */
+  .bg-blob-4 {
+    width: 45vw;
+    height: 45vw;
+    max-width: 400px;
+    max-height: 400px;
+    background: radial-gradient(circle, rgba(255, 240, 4, 0.08) 0%, transparent 70%);
+    top: -5%;
+    right: -5%;
+    animation: blob4 4s ease-in-out infinite;
+  }
+
+  /* ─── Film grain — triplo ─── */
+
+  @keyframes grain {
+    0%   { background-position:   0px   0px; }
+    10%  { background-position:  -9px -15px; }
+    20%  { background-position: -22px   7px; }
+    30%  { background-position:  11px -18px; }
+    40%  { background-position:  -7px  16px; }
+    50%  { background-position: -25px  13px; }
+    60%  { background-position:  22px   4px; }
+    70%  { background-position:   4px  21px; }
+    80%  { background-position:   6px -11px; }
+    90%  { background-position: -14px  14px; }
+    100% { background-position:   0px   0px; }
+  }
+
+  .grain-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.20;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
+    animation: grain 0.2s steps(1) infinite;
+    will-change: background-position;
+  }
+
+  /* ─── Logo: metallic gold shine sweep ─── */
+
+  .logo-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Bloom ambiente dourado — por trás */
+  @keyframes goldenBloom {
+    0%, 100% { opacity: 0.45; transform: scale(1); }
+    50%       { opacity: 0.70; transform: scale(1.08); }
+  }
+
+  .logo-bloom {
+    width: min(700px, 180vw);
+    height: min(520px, 133vw);
+    border-radius: 50%;
+    background: radial-gradient(
+      ellipse,
+      rgba(255, 220, 0, 0.24) 0%,
+      rgba(255, 200, 0, 0.10) 35%,
+      rgba(255, 185, 0, 0.03) 58%,
+      transparent 80%
+    );
+    filter: blur(40px);
+    pointer-events: none;
+    animation: goldenBloom 2.8s ease-in-out infinite;
+  }
+
+
+  /* ─── Entrance animations ─── */
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .anim-fade-up {
+    opacity: 0;
+    animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .anim-fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+  }
+
+  .delay-100 { animation-delay: 0.10s; }
+  .delay-200 { animation-delay: 0.20s; }
+  .delay-350 { animation-delay: 0.35s; }
+  .delay-500 { animation-delay: 0.50s; }
+  .delay-650 { animation-delay: 0.65s; }
+  .delay-800 { animation-delay: 0.80s; }
+
+  /* ─── Focus visible — acessibilidade de teclado ─── */
+
+  .focus-ring:focus-visible {
+    outline: 2px solid #CC2020;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* ─── Reduced motion ─── */
+  @media (prefers-reduced-motion: reduce) {
+    .anim-fade-up, .anim-fade-in { opacity: 1; animation: none; }
+    .tarja-btn-glow,
+    .bg-blob-1, .bg-blob-2, .bg-blob-3, .bg-blob-4,
+    .grain-overlay, .flash,
+    .logo-bloom { animation: none; }
+  }
+
+}
