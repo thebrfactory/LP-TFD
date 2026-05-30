@@ -102,7 +102,7 @@ export default function Home() {
         <h1
           className="headline-glow font-black anim-fade-up delay-200"
           style={{
-            fontSize: 'clamp(0.75rem, 2.34vw, 1.3rem)',
+            fontSize: 'clamp(1rem, 2.34vw, 1.3rem)',
             maxWidth: '32rem',
             marginBottom: '0.5rem',
             lineHeight: 1.75,
@@ -140,14 +140,14 @@ export default function Home() {
       >
         <p
           style={{
-            color: '#2A1212',
-            fontSize: '9px',
+            color: '#7A4848',
+            fontSize: '10px',
             fontWeight: 200,
             letterSpacing: '0.07em',
             textTransform: 'uppercase',
             textAlign: 'center',
             lineHeight: 1.65,
-            opacity: 0.7,
+            opacity: 0.5,
           }}
         >
           MELFIORE © 2026 .TBF. inc. All rights reserved<br />
@@ -155,7 +155,7 @@ export default function Home() {
           RUA PAMPLONA, 145, JARDIM PAULISTA, SÃO PAULO, SP, 01.405-900<br />
           <a
             href="/privacidade"
-            style={{ color: '#2A1212', textDecoration: 'underline' }}
+            style={{ color: '#7A4848', textDecoration: 'underline' }}
           >
             política de privacidade
           </a>
