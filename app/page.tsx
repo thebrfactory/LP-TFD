@@ -9,6 +9,7 @@ export default function Home() {
         background: '#000000',
         display: 'grid',
         gridTemplateRows: 'auto 1fr auto',
+        overflow: 'hidden',
       }}
     >
 
@@ -72,7 +73,7 @@ export default function Home() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'flex-end',
-          padding: 'clamp(1.5rem, 7vh, 3.5rem) 1.5rem 0.5rem',
+          padding: 'clamp(0.5rem, 3vh, 3.5rem) 1.5rem 0.5rem',
           pointerEvents: 'none',
         }}
       >
@@ -103,7 +104,7 @@ export default function Home() {
           style={{
             fontSize: 'clamp(0.75rem, 2.34vw, 1.3rem)',
             maxWidth: '32rem',
-            marginBottom: '0.75rem',
+            marginBottom: '0.5rem',
             lineHeight: 1.75,
             letterSpacing: '0.08em',
           }}
@@ -116,7 +117,7 @@ export default function Home() {
           className="font-medium anim-fade-up delay-350 subheadline-glow"
           style={{
             color: '#7A1A1A',
-            fontSize: 'clamp(0.9rem, 2.4vw, 1.05rem)',
+            fontSize: 'clamp(0.75rem, 2vw, 1rem)',
             lineHeight: 1.65,
             letterSpacing: '0.035em',
             opacity: 0.68,
@@ -135,17 +136,18 @@ export default function Home() {
       {/* ── Footer ── */}
       <footer
         className="relative flex items-center justify-center anim-fade-in delay-650"
-        style={{ zIndex: 3, background: 'transparent', padding: '12px 24px 16px' }}
+        style={{ zIndex: 3, background: 'transparent', padding: '8px 24px calc(12px + env(safe-area-inset-bottom, 0px))' }}
       >
         <p
           style={{
-            color: '#7A4848',
-            fontSize: '10px',
+            color: '#2A1212',
+            fontSize: '9px',
             fontWeight: 200,
             letterSpacing: '0.07em',
             textTransform: 'uppercase',
             textAlign: 'center',
             lineHeight: 1.65,
+            opacity: 0.7,
           }}
         >
           MELFIORE © 2026 .TBF. inc. All rights reserved<br />
@@ -153,7 +155,7 @@ export default function Home() {
           RUA PAMPLONA, 145, JARDIM PAULISTA, SÃO PAULO, SP, 01.405-900<br />
           <a
             href="/privacidade"
-            style={{ color: '#7A4848', textDecoration: 'underline', opacity: 0.7 }}
+            style={{ color: '#2A1212', textDecoration: 'underline' }}
           >
             política de privacidade
           </a>

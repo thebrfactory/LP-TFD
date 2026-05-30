@@ -67,12 +67,12 @@ export default function WaitlistForm() {
     return (
       <div className="text-center py-4 anim-fade-up">
         <p
-          className="text-2xl font-black tracking-tight"
-          style={{ color: '#E8E8E8', letterSpacing: '-0.02em', textShadow: '0 0 24px rgba(232,232,232,0.20)' }}
+          className="text-2xl font-black tracking-tight headline-glow"
+          style={{ letterSpacing: '-0.02em' }}
         >
           Você está dentro.
         </p>
-        <p className="mt-3 text-sm font-light" style={{ color: '#555555', lineHeight: 1.6 }}>
+        <p className="mt-3 text-sm font-light" style={{ color: '#CC2020', lineHeight: 1.6 }}>
           Fique de olho no seu e-mail.<br />Em breve, tudo fará sentido.
         </p>
       </div>
@@ -84,7 +84,7 @@ export default function WaitlistForm() {
 
       {/* Nome */}
       <div className="flex flex-col gap-1.5">
-        <div style={{ position: 'relative', height: '90px' }}>
+        <div className="tarja-field">
           <TarjaSvg
             fill={loading ? '#030000' : '#0a0000'}
             stroke={errors.name ? '#FF4444' : focused === 'name' ? '#CC2020' : '#2a1212'}
@@ -110,7 +110,7 @@ export default function WaitlistForm() {
 
       {/* Email */}
       <div className="flex flex-col gap-1.5">
-        <div style={{ position: 'relative', height: '90px' }}>
+        <div className="tarja-field">
           <TarjaSvg
             fill={loading ? '#030000' : '#0a0000'}
             stroke={errors.email ? '#FF4444' : focused === 'email' ? '#CC2020' : '#2a1212'}
@@ -142,8 +142,7 @@ export default function WaitlistForm() {
 
       {/* CTA */}
       <div
-        style={{ position: 'relative', height: '90px' }}
-        className={!loading ? 'tarja-btn-glow' : ''}
+        className={`tarja-field${!loading ? ' tarja-btn-glow' : ''}`}
       >
         <TarjaSvg fill={loading ? '#8B1515' : '#CC2020'} />
         <button

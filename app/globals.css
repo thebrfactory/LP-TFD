@@ -16,7 +16,8 @@
     color: #E8E8E8;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
+    overflow: hidden;
+    overscroll-behavior: none;
   }
 
   ::selection {
@@ -49,6 +50,19 @@
       drop-shadow(0 0 8px  rgba(180, 130, 0, 0.70))
       drop-shadow(0 0 22px rgba(120, 80,  0, 0.40))
       drop-shadow(0 0 50px rgba(70,  45,  0, 0.18));
+  }
+
+  /* ─── Tarja field height — responsive ─── */
+
+  .tarja-field {
+    position: relative;
+    height: 90px;
+  }
+
+  @media (max-width: 639px) {
+    .tarja-field {
+      height: 56px;
+    }
   }
 
   /* ─── Tarja inputs ─── */
