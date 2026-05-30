@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
+import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 
 const brother1816 = localFont({
@@ -51,6 +54,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-BR" className={brother1816.variable}>
       <body className="font-brand bg-brand-bg min-h-screen">
         {children}
+        <Analytics />
+        <SpeedInsights />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-QDQDMC73CF"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-QDQDMC73CF');
+          `}
+        </Script>
       </body>
     </html>
   )

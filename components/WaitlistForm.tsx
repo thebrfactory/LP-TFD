@@ -80,7 +80,7 @@ export default function WaitlistForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="w-full flex flex-col gap-[12px]">
+    <form onSubmit={handleSubmit} noValidate className="w-full flex flex-col gap-2 sm:gap-3">
 
       {/* Nome */}
       <div className="flex flex-col gap-1.5">
@@ -192,7 +192,7 @@ export default function WaitlistForm() {
 
       {/* Microcopy */}
       <p
-        className="text-center mt-1"
+        className="hidden sm:block text-center mt-1"
         style={{ color: '#7A4848', fontSize: '13px', fontWeight: 200, letterSpacing: '0.06em', lineHeight: 1.75 }}
       >
         seus dados são criptografados e protegidos.<br />

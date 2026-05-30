@@ -84,7 +84,7 @@ export default function Home() {
             alt="MELFIORE"
             className="logo-glow"
             style={{
-              width: 'min(24rem, calc(100vw - 3rem))',
+              width: 'min(24rem, max(11rem, 52vw))',
               height: 'auto',
               display: 'block',
               position: 'relative',
@@ -104,8 +104,8 @@ export default function Home() {
           style={{
             fontSize: 'clamp(1rem, 2.34vw, 1.3rem)',
             maxWidth: '32rem',
-            marginBottom: '0.5rem',
-            lineHeight: 1.75,
+            marginBottom: '0.35rem',
+            lineHeight: 1.6,
             letterSpacing: '0.08em',
           }}
         >
@@ -114,7 +114,7 @@ export default function Home() {
           quem é ela.
         </h1>
         <p
-          className="font-medium anim-fade-up delay-350 subheadline-glow"
+          className="hidden sm:block font-medium anim-fade-up delay-350 subheadline-glow"
           style={{
             color: '#7A1A1A',
             fontSize: 'clamp(0.75rem, 2vw, 1rem)',
@@ -122,7 +122,7 @@ export default function Home() {
             letterSpacing: '0.035em',
             opacity: 0.68,
             maxWidth: '26rem',
-            marginBottom: '0.75rem',
+            marginBottom: '0.5rem',
           }}
         >
           obtenha acesso antecipado<br />
@@ -150,9 +150,10 @@ export default function Home() {
             opacity: 0.5,
           }}
         >
-          MELFIORE © 2026 .TBF. inc. All rights reserved<br />
+          MELFIORE © 2026 .TBF. inc. All rights reserved
+          <span className="hidden sm:inline"><br />
           .THE FIORE DAILY. intimacy wellness club .TBF.ORIGINAL LABEL<br />
-          RUA PAMPLONA, 145, JARDIM PAULISTA, SÃO PAULO, SP, 01.405-900
+          RUA PAMPLONA, 145, JARDIM PAULISTA, SÃO PAULO, SP, 01.405-900</span>
         </p>
       </footer>
 
