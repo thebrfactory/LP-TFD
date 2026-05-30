@@ -22,10 +22,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://melfiore.com'),
-  title: 'MELFIORE — Em breve',
+  title: 'MELFIORE | o diário secreto',
   description: 'Algo está chegando. Cadastre-se e seja o primeiro a saber.',
   openGraph: {
-    title: 'MELFIORE — Em breve',
+    title: 'MELFIORE | o diário secreto',
     description: 'Algo está chegando. Cadastre-se e seja o primeiro a saber.',
     type: 'website',
     url: 'https://melfiore.com',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MELFIORE — Em breve',
+    title: 'MELFIORE | o diário secreto',
     description: 'Algo está chegando. Cadastre-se e seja o primeiro a saber.',
   },
   icons: {

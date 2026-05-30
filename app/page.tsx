@@ -152,13 +152,7 @@ export default function Home() {
         >
           MELFIORE © 2026 .TBF. inc. All rights reserved<br />
           .THE FIORE DAILY. intimacy wellness club .TBF.ORIGINAL LABEL<br />
-          RUA PAMPLONA, 145, JARDIM PAULISTA, SÃO PAULO, SP, 01.405-900<br />
-          <a
-            href="/privacidade"
-            style={{ color: '#7A4848', textDecoration: 'underline' }}
-          >
-            política de privacidade
-          </a>
+          RUA PAMPLONA, 145, JARDIM PAULISTA, SÃO PAULO, SP, 01.405-900
         </p>
       </footer>
 
