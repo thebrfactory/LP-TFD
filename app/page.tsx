@@ -92,26 +92,10 @@ export default function Home() {
             letterSpacing: '0.08em',
           }}
         >
-          junte-se a milhares de pessoas<br />
+          junte-se a milhares de fãs<br />
           que aguardam saber<br />
           quem é ela.
         </h1>
-
-        <p
-          className="hidden sm:block font-medium anim-fade-up delay-350 subheadline-glow"
-          style={{
-            color: '#7A1A1A',
-            fontSize: 'clamp(0.75rem, 2vw, 1rem)',
-            lineHeight: 1.65,
-            letterSpacing: '0.035em',
-            opacity: 0.68,
-            maxWidth: '26rem',
-            marginBottom: '0.5rem',
-          }}
-        >
-          obtenha acesso antecipado<br />
-          &amp; atualizações exclusivas
-        </p>
 
         <div className="w-full anim-fade-up delay-500" style={{ maxWidth: '22rem', marginTop: '0.5rem' }}>
           <WaitlistForm />
