@@ -53,6 +53,13 @@ Branch de referência: `main` = produção · `develop` = trabalho em andamento
 
 ---
 
-## PENDENTE
+---
 
-- [ ] E-mail de boas-vindas ativo (aguarda BREVO_API_KEY + BREVO_TEMPLATE_ID + DNS)
+## [1.2.0] · 2026-05-31
+
+### Confirmado em produção
+- E-mail de boas-vindas ativo e chegando na caixa de entrada
+- Remetente `diario@melfiore.com` verificado (SPF/DKIM/DMARC)
+- Integração Brevo 100% funcional
+
+**Produto completo. Nenhuma pendência crítica em aberto.**
