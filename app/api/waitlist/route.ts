@@ -27,7 +27,7 @@ async function addBrevoContact(name: string, email: string): Promise<void> {
     },
     body: JSON.stringify({
       email: email.trim().toLowerCase(),
-      attributes: { FIRSTNAME: firstName },
+      attributes: { NOME: firstName },
       listIds: [Number(process.env.BREVO_LIST_ID)],
       updateEnabled: false, // silently ignores duplicates
     }),
