@@ -62,4 +62,19 @@ Branch de referência: `main` = produção · `develop` = trabalho em andamento
 - Remetente `diario@melfiore.com` verificado (SPF/DKIM/DMARC)
 - Integração Brevo 100% funcional
 
-**Produto completo. Nenhuma pendência crítica em aberto.**
+---
+
+## [1.2.1] · 2026-06-04
+
+### Corrigido
+- Bug: campo `NOME` não era salvo na Brevo — `attributes` usava `FIRSTNAME` (campo inexistente na conta). Corrigido para `NOME`. Commit `10259f0` · branch `main`
+
+### Operacional
+- Contato fantasma (ID 2, "Welcome Bot", sem e-mail) deletado via MCP Brevo
+- MCP Brevo configurado em `~/.claude.json` — Claude acessa a Brevo diretamente sem scripts
+
+### Status
+- 8 contatos reais na lista, todos com e-mail de confirmação entregue
+- Campo NOME em branco nos cadastros anteriores ao fix (esperado — não retroativo)
+
+**Produto estável em produção.**
