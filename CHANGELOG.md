@@ -84,5 +84,5 @@ Branch de referência: `main` = produção · `develop` = trabalho em andamento
 ## [1.2.2] · 2026-06-06
 
 ### Operacional
-- Corrigido autor git do repo (thefioredaily@gmail.com) para alinhar com conta Vercel Hobby
-- Deployments anteriores bloqueados pela Vercel por author mismatch — resolvido a partir deste commit
+- Removido footer "Co-Authored-By: Claude Sonnet" dos commits — Vercel Hobby bloqueia deploys quando co-autor não tem conta GitHub reconhecida
+- Commits neste repo não devem incluir Co-Authored-By para garantir deploy automático
