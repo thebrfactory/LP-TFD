@@ -84,5 +84,8 @@ Branch de referência: `main` = produção · `develop` = trabalho em andamento
 ## [1.2.2] · 2026-06-06
 
 ### Operacional
-- Removido footer "Co-Authored-By: Claude Sonnet" dos commits — Vercel Hobby bloqueia deploys quando co-autor não tem conta GitHub reconhecida
-- Commits neste repo não devem incluir Co-Authored-By para garantir deploy automático
+- Repo tornado **público** no GitHub — resolve bloqueio de deploy no Vercel Hobby (plano gratuito não suporta colaboração em repos privados)
+- Co-Authored-By removido dos commits — Vercel parseia co-autores e bloqueia quando não encontra conta GitHub
+- Fix NOME (`10259f0`) confirmado em produção — campo NOME salva corretamente na Brevo ✅
+
+**Fase 1 encerrada. Site 100% funcional.**
