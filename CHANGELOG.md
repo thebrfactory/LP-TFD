@@ -78,3 +78,11 @@ Branch de referência: `main` = produção · `develop` = trabalho em andamento
 - Campo NOME em branco nos cadastros anteriores ao fix (esperado — não retroativo)
 
 **Produto estável em produção.**
+
+---
+
+## [1.2.2] · 2026-06-06
+
+### Operacional
+- Corrigido autor git do repo (thefioredaily@gmail.com) para alinhar com conta Vercel Hobby
+- Deployments anteriores bloqueados pela Vercel por author mismatch — resolvido a partir deste commit
