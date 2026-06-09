@@ -65,6 +65,47 @@
     }
   }
 
+  /* ─── Fiorettes ticker ─── */
+
+  @keyframes fioTicker {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  .fio-ticker-track {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: fioTicker 18s linear infinite;
+  }
+
+  /* ─── Fiorettes masonry grid ─── */
+
+  .fiorettes-grid {
+    columns: 2;
+    column-gap: 12px;
+  }
+
+  .fiorettes-grid > article {
+    break-inside: avoid;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 639px) {
+    .fiorettes-grid {
+      columns: 1;
+    }
+  }
+
+  /* ─── Fiorettes inputs ─── */
+
+  .fiorettes-input::placeholder,
+  .fiorettes-textarea::placeholder {
+    color: #7A4848;
+    font-weight: 200;
+    letter-spacing: 0.02em;
+  }
+
   /* ─── Tarja inputs ─── */
 
   .tarja-input {
